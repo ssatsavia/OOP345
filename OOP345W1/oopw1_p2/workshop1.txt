@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red12\green12\blue12;}
+{\*\expandedcolortbl;;\cssrgb\c5098\c5098\c5098;}
+\margl1440\margr1440\vieww23040\viewh17400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \
+Reflection workshop 1\
+Sage Satsavia\
+132238197\
+ssatsavia@myseneca.ca\
+\
+During this workshop, I realized just how crucial header guards are in keeping our program organized. They're like gatekeepers, making sure we don't end up with messy situations like including the same file over and over again, or having conflicts with names. It's all about keeping things neat and tidy.\
+\
+Understanding linkage was another eye-opener. It's basically about where in the program we can access variables and functions. For example, in the "FoodOrder" class, I used a little private counter to keep track of how many times the display function was called. This counter was like a secret that only the class knew about, which kept things nice and organized.\
+\
+Then there's external linkage, which lets us access things like tax rates from different parts of the program. It's like having a shared resource that everyone can use, making communication between different parts of the program much easier.\
+\
+When I upgraded the "FoodOrder" class to handle longer food descriptions, it was like giving it a superpower. By switching to a more flexible type of string, I made the program much more adaptable and reduced the risk of it getting overwhelmed by long descriptions.\
+\
+But it wasn't all smooth, 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+One challenge I had was making sure I used the proper header guards and namespaces to avoid multiple inclusions and name conflicts.\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\fs48 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+}
