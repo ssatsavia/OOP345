@@ -1,0 +1,15 @@
+Workshop 2
+Sage Satsavia
+132238197
+ssatsavia@myseneca.ca
+
+
+During this workshop, I delved deeper into C++ programming concepts such as class implementation, file I/O operations, timing measurements, and namespace usage through the creation of the ProteinDatabase and TimedTask classes. 
+I reinforced my understanding of constructors, member functions, private data members, and encapsulation while handling file input/output operations with ifstream for reading data and parsing file contents. 
+
+Additionally, I learned about timing measurements using the <chrono> library to measure task execution time and namespace usage for code organization and prevention of naming conflicts.
+
+While troubleshooting issues related to namespace conflicts and header file inclusion, I grasped the significant time difference between copy and move operations, comprehending that copy operations involve duplicating the object's contents, which can be time-consuming, while move operations transfer resources from one object to another more efficiently.
+
+Another hurdle was using std::move correctly to transfer resources without unintentionally causing undefined behaviour. It was crucial to make sure that the source object's state remained valid and destructible after the move.
+Overall, this workshop has significantly improved my practical skills in managing C++ resources and optimizing performance. It has offered valuable insights into effective coding practices and underscored the importance of comprehending underlying mechanisms for writing resilient and efficient code.}
