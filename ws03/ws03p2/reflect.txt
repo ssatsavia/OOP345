@@ -1,0 +1,37 @@
+/////////////////////////////////////////////////////////
+Sage Satsavia
+Workshop 3 Reflection
+132238197
+ssatsavia@myseneca.ca
+/////////////////////////////////////////////////////////
+
+While completing this workshop, I have learned many things. Firstly, I learned how to define class objects outside the class definition:
+
+template<typename T, unsigned C>
+T Collection<T, C>::m_smallestItem = std::numeric_limits<T>::max();
+
+template<typename T, unsigned C>
+T Collection<T, C>::m_largestItem = std::numeric_limits<T>::lowest();
+
+When working with static members, defining them outside the class is essential. This is because static members are shared across all instances of the class template, so they must be defined in a way that the compiler can work properly to generate the code specific to what was given to it. The code above is an example of that.
+
+I also learned the necessity of initialization for the Book and the capacity (like 72):
+
+template<>
+Book Collection<Book, 72>::m_smallestItem = Book("", 1, 10000);
+
+template<>
+Book Collection<Book, 72>::m_largestItem = Book("", 10000, 1);
+
+The initialization of m_smallestItem and m_largestItem for Book isn’t strictly necessary unless the specialization will be used in the program. If the capacity for the collection is always 10 for books, then they can be omitted. However, providing initializations for various capacities ensures flexibility and reusability of the code. The code above is an example of that.
+
+I also faced some challenges and came up with solutions to them:
+
+auto pos = std::find_if(this->m_items.begin(), this->m_items.begin() + this->m_size, [&](const T& currentItem) { return item < currentItem; });
+auto index = std::distance(this->m_items.begin(), pos);
+for (unsigned i = this->m_size; i > index; --i) {
+    this->m_items[i] = this->m_items[i - 1];
+}
+this->m_items[index] = item;
+
+One challenge I encountered was ensuring the OrderedCollection maintains the order with the use of array’s non-existent insert method. At first, I thought maybe it was a bug, so I changed the code many times. Then I decided to just manually shift the elements accordingly to allow the new items to be placed at their positions correctly.
