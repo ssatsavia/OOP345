@@ -1,0 +1,25 @@
+***********************************************************************
+Workshop 4 Reflection
+Name: Sage Satsavia
+Student ID: 132238197
+Email: ssatsavia@myseneca.ca
+
+***********************************************************************
+
+
+In this workshop I learned about key concepts such as composition, aggregation, and association.
+
+Composition involves an object managing the lifecycle of contained objects. 
+In ‘Restaurant.cpp’, the ‘Restaurant’ class uses composition to manage ‘Reservation’ objects through ‘m_reservations’. 
+When a ‘Restaurant’ instance is destroyed, it deletes its ‘m_reservations’.
+
+Aggregation allows objects to exist independently of the container. Although it was not exactly shown in my code, if ‘Restaurant’ had pointers to ‘Reservation’ objects it didn't own or delete, that would be a case of aggregation.
+
+Copy and Move Functions: 
+The copy constructor and assignment operator in ‘Restaurant.cpp’ create deep copies of ‘Reservation’ objects, ensuring each ‘Restaurant’ instance manages its own reservations. 
+The move constructor and move assignment operator efficiently transfer ownership of resources. For example, in “Restaurant::operator=(Restaurant&& other)”, ‘m_reservations’ is transferred from ‘other’ to ‘*this’, avoiding deep copying.
+
+Association: This is shown in the 'operator<<' function, where ‘Restaurant’ uses ‘std::ostream’ to output data without owning it. An example is, “std::ostream& operator<<(std::ostream& os, const Reservation& res)”, which formats ‘Reservation’ details for output.
+
+Challenges: I found that managing memory correctly was tricky. Initially, I struggled with memory leaks, but implementing proper cleanup in assignment operators solved this and ensured deep copying worked well as I had planned.
+
